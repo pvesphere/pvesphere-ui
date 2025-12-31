@@ -1,0 +1,38 @@
+---
+alwaysApply: true
+---
+
+# 前端项目规范
+## 前言
+我是一个前端小白
+## 项目框架
+采用 https://github.com/pure-admin/vue-pure-admin
+
+全面ESM+Vue3+Vite+Element-Plus+TypeScript编写的一款后台管理系统（兼容移动端）
+
+## 项目结构
+```
+src
+├── api
+├── App.vue
+├── assets
+├── components
+├── config
+├── directives
+├── layout
+├── main.ts
+├── plugins
+├── router
+├── store
+├── style
+├── utils
+└── views
+```
+## 项目基本使用
+### 安装依赖
+cd vue-pure-admin
+pnpm install
+### 启动平台
+pnpm dev
+###项目打包
+pnpm build

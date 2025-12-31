@@ -1,0 +1,802 @@
+buttons:
+  pureLoginOut: LoginOut
+  pureUserSettings: User Settings
+  pureLogin: Login
+  pureOpenSystemSet: Open System Configs
+  pureReload: Reload
+  pureCloseCurrentTab: Close CurrentTab
+  pureCloseLeftTabs: Close LeftTabs
+  pureCloseRightTabs: Close RightTabs
+  pureCloseOtherTabs: Close OtherTabs
+  pureCloseAllTabs: Close AllTabs
+  pureContentFullScreen: Content FullScreen
+  pureContentExitFullScreen: Content ExitFullScreen
+  pureClickCollapse: Collapse
+  pureClickExpand: Expand
+  pureConfirm: Confirm
+  pureSwitch: Switch
+  pureClose: Close
+  pureBackTop: BackTop
+  pureOpenText: Open
+  pureCloseText: Close
+search:
+  pureTotal: Total
+  pureHistory: History
+  pureCollect: Collect
+  pureDragSort: （Drag Sort）
+  pureEmpty: Empty
+  purePlaceholder: Search Menu
+panel:
+  pureSystemSet: System Configs
+  pureCloseSystemSet: Close System Configs
+  pureClearCacheAndToLogin: Clear cache and return to login page
+  pureClearCache: Clear Cache
+  pureOverallStyle: Overall Style
+  pureOverallStyleLight: Light
+  pureOverallStyleLightTip: Set sail freshly and light up the comfortable work interface
+  pureOverallStyleDark: Dark
+  pureOverallStyleDarkTip: Moonlight Overture, indulge in the tranquility and elegance of the night
+  pureOverallStyleSystem: Auto
+  pureOverallStyleSystemTip: Synchronize time, the interface naturally responds to morning and dusk
+  pureThemeColor: Theme Color
+  pureLayoutModel: Layout Model
+  pureVerticalTip: The menu on the left is familiar and friendly
+  pureHorizontalTip: Top menu, concise overview
+  pureMixTip: Mixed menu, flexible
+  pureStretch: Stretch Page
+  pureStretchFixed: Fixed
+  pureStretchFixedTip: Compact pages make it easy to find the information you need
+  pureStretchCustom: Custom
+  pureStretchCustomTip: Minimum 1280, maximum 1600
+  pureTagsStyle: Tags Style
+  pureTagsStyleSmart: Smart
+  pureTagsStyleSmartTip: Smart tags add fun and brilliance
+  pureTagsStyleCard: Card
+  pureTagsStyleCardTip: Card tags for efficient browsing
+  pureTagsStyleChrome: Chrome
+  pureTagsStyleChromeTip: Chrome style is classic and elegant
+  pureInterfaceDisplay: Interface Display
+  pureGreyModel: Grey Model
+  pureWeakModel: Weak Model
+  pureHiddenTags: Hidden Tags
+  pureHiddenFooter: Hidden Footer
+  pureMultiTagsCache: MultiTags Cache
+menus:
+  pureHome: Home
+  pureLogin: Login
+  pureAbnormal: Abnormal Page
+  purePageNotFound: "404"
+  pureAccessDenied: "403"
+  pureServerError: "500"
+  purePermission: Permission Manage
+  purePermissionPage: Page Permission
+  purePermissionButton: Button Permission
+  purePermissionButtonRouter: Route return button permission
+  purePermissionButtonLogin: Login interface return button permission
+  purePveManagement: PVE Management
+  purePveOverview: Overview
+  purePveDatacenter: Datacenter
+  purePveNodes: Nodes
+  purePveVms: Virtual Machines
+  purePveStorage: Storage
+  purePveNetworks: Networks
+  purePveTemplates: Templates
+  purePveSnapshots: Snapshots
+  purePveBackups: Backups
+  purePveRestore: Restore
+status:
+  pureLoad: Loading...
+  pureMessage: Message
+  pureNotify: Notify
+  pureTodo: Todo
+  pureNoMessage: No Message
+  pureNoNotify: No Notify
+  pureNoTodo: No Todo
+login:
+  pureUsername: Username
+  purePassword: Password
+  pureLogin: Login
+  pureLoginSuccess: Login Success
+  pureLoginFail: Login Fail
+  pureLoginFailTip: Login failed, please check if your email and password are correct
+  pureUsernameReg: Please enter username
+  purePassWordReg: Please enter password
+  purePassWordRuleReg: The password format should be any combination of 8-18 digits, letters, and symbols
+  pureRegister: Register
+user:
+  settings:
+    title: User Settings
+    email: Email
+    nickname: Nickname
+    nicknamePlaceholder: Please enter nickname
+    nicknameRequired: Please enter nickname
+    nicknameLength: Nickname length must be between 1 and 50 characters
+    changePassword: Change Password
+    oldPassword: Current Password
+    oldPasswordPlaceholder: Please enter current password
+    oldPasswordRequired: Current password is required to change password
+    newPassword: New Password
+    newPasswordPlaceholder: Please enter new password (leave blank to keep unchanged)
+    confirmPassword: Confirm New Password
+    confirmPasswordPlaceholder: Please enter new password again
+    confirmPasswordRequired: Please enter new password again
+    confirmPasswordMismatch: The two passwords do not match
+    passwordRule: Password format should be any combination of 8-18 digits, letters, and symbols
+    save: Save
+    reset: Reset
+    saveSuccess: Save successful
+    saveFailed: Save failed
+    getUserInfoFailed: Failed to get user information
+# PVE
+pve:
+  # Common
+  common:
+    search: Search
+    reset: Reset
+    create: Create
+    edit: Edit
+    delete: Delete
+    remove: Remove
+    save: Save
+    cancel: Cancel
+    confirm: Confirm
+    close: Close
+    refresh: Refresh
+    operate: Operate
+    status: Status
+    name: Name
+    description: Description
+    createTime: Create Time
+    updateTime: Update Time
+    loading: Loading...
+    noData: No Data
+    success: Success
+    failed: Failed
+    confirmDelete: Are you sure to delete?
+    deleteSuccess: Delete Success
+    deleteFailed: Delete Failed
+    createSuccess: Create Success
+    createFailed: Create Failed
+    updateSuccess: Update Success
+    updateFailed: Update Failed
+    pleaseSelect: Please Select
+    pleaseInput: Please Input
+    lengthBetween: "Length must be between {min} and {max} characters"
+    yes: Yes
+    no: No
+    backendLogin: Backend Login
+    consoleLogin: Console
+    more: More
+    detail: Detail
+  # Cluster Management
+  cluster:
+    title: Cluster Management
+    clusterName: Cluster Name
+    apiUrl: API URL
+    username: Username
+    password: Password
+    tokenId: Token ID
+    tokenSecret: Token Secret
+    authType: Auth Type
+    nodeCount: Node Count
+    vmCount: VM Count
+    createCluster: Create Cluster
+    editCluster: Edit Cluster
+    deleteCluster: Delete Cluster
+    clusterInfo: Cluster Info
+    clusterNodes: Cluster Nodes
+    clusterTasks: Cluster Tasks
+    taskList: Task List
+    taskId: Task ID
+    taskType: Task Type
+    taskStatus: Task Status
+    taskNode: Task Node
+    taskStartTime: Start Time
+    taskEndTime: End Time
+    taskUpid: UPID
+    running: Running
+    stopped: Stopped
+    noClusterSelected: Please select cluster
+    noTasksAvailable: No tasks available
+    addCluster: Add Cluster
+    enable: Enable
+    disable: Disable
+    enabled: Enabled
+    disabled: Disabled
+    verifyApi: Verify API
+    verifyingApi: Verifying API...
+    confirmEnable: Confirm Enable
+    confirmDisable: Confirm Disable
+    confirmEnableMessage: "Are you sure you want to enable cluster \"{name}\"?"
+    confirmDisableMessage: "Are you sure you want to disable cluster \"{name}\"?"
+    enableSuccess: Cluster enabled successfully
+    enableFailed: Failed to enable cluster
+    disableSuccess: Cluster disabled successfully
+    disableFailed: Failed to disable cluster
+    verifyApiSuccess: API connection successful
+    verifyApiFailed: API connection failed
+    verifyApiAfterSave: Please save the cluster first before verifying API
+    pleaseInputApiCredentials: Please enter API URL, User ID and User Token first
+    deleteConfirm: Confirm Delete
+    deleteConfirmMessage: "Are you sure you want to delete cluster \"{name}\"?\n\nNote: Deleting the cluster will also delete associated nodes, VMs and other data."
+    datacenter: Datacenter
+    region: Region
+    version: Version
+    createSuccess: Cluster created successfully
+    createFailed: Failed to create cluster
+    updateSuccess: Cluster updated successfully
+    updateFailed: Failed to update cluster
+    clusterNameAlias: Cluster Alias
+    envLabel: Environment
+    datacenterLabel: Datacenter
+    apiUrlLabel: API URL
+    regionLabel: Region
+    isSchedulable: Schedulable
+    isEnabled: Enabled
+    userId: User ID
+    userToken: User Token
+    pleaseInputClusterName: Please enter cluster name
+    pleaseInputClusterNameAlias: Please enter cluster alias
+    pleaseInputEnv: Please enter environment
+    pleaseInputDatacenter: Please enter datacenter
+    pleaseInputApiUrl: Please enter API URL
+    pleaseInputRegion: Please enter region
+    pleaseInputUserId: Please enter user ID
+    pleaseInputUserToken: Please enter user token
+    clusterNameRequired: Cluster name is required
+    clusterNameAliasRequired: Cluster alias is required
+    envRequired: Environment is required
+    datacenterRequired: Datacenter is required
+    apiUrlRequired: API URL is required
+    regionRequired: Region is required
+    userIdRequired: User ID is required
+    userTokenRequired: User token is required
+    apiUrlInvalid: Please enter a valid URL (starting with http:// or https://)
+    saveSuccess: Save successful
+    saveFailed: Save failed
+  # Node Management
+  node:
+    title: Node Management
+    nodeName: Node Name
+    ipAddress: IP Address
+    clusterName: Cluster Name
+    vmLimit: VM Limit
+    env: Env
+    schedulable: Schedulable
+    schedulableEnabled: Enabled
+    schedulableDisabled: Disabled
+    enableSchedule: Enable Schedule
+    disableSchedule: Disable Schedule
+    scheduleEnabled: Schedule Enabled
+    scheduleDisabled: Schedule Disabled
+    annotations: Annotations
+    nodeDetail: Node Detail
+    overview: Overview
+    services: System Services
+    disks: Disks
+    basicInfo: Basic Info
+    nodeStatus: Node Status
+    monitoring: Monitoring
+    cpuUsage: CPU Usage
+    memUsage: Memory Usage
+    swapUsage: SWAP Usage
+    ksmSharing: KSM Sharing
+    loadAverage: Load Average
+    uptime: Uptime
+    kernelVersion: Kernel Version
+    pveVersion: PVE Version
+    serviceName: Service Name
+    serviceRunning: Running
+    serviceStopped: Stopped
+    serviceStart: Start
+    serviceStop: Stop
+    serviceRestart: Restart
+    serviceStartSuccess: Service started successfully
+    serviceStartFailed: Failed to start service
+    serviceStopConfirm: Are you sure you want to stop service '{name}'?
+    serviceStopSuccess: Service stopped successfully
+    serviceStopFailed: Failed to stop service
+    serviceRestartConfirm: Are you sure you want to restart service '{name}'?
+    serviceRestartSuccess: Service restarted successfully
+    serviceRestartFailed: Failed to restart service
+    cpuModel: CPU Model
+    cpuCores: CPU Cores
+    cpuSockets: CPU Sockets
+    console: Console
+    maintenance: Maintenance
+    reboot: Reboot
+    shutdown: Shutdown
+    confirmReboot: Confirm Reboot
+    confirmShutdown: Confirm Shutdown
+    confirmRebootMessage: "Are you sure you want to reboot node \"{name}\"?"
+    confirmShutdownMessage: "Are you sure you want to shutdown node \"{name}\"?"
+    rebootCommandSent: Reboot command sent
+    shutdownCommandSent: Shutdown command sent
+    rebootFailed: Failed to reboot node
+    shutdownFailed: Failed to shutdown node
+    consoleNotImplemented: Console feature not implemented yet
+    maintenanceNotImplemented: Maintenance feature not implemented yet
+    noClusterForBackend: Node not associated with cluster, cannot redirect
+    noApiUrlForBackend: Cluster API URL does not exist, cannot redirect
+    updateVMLimitSuccess: VM limit updated successfully
+    updateVMLimitFailed: Failed to update vm limit
+    networkTraffic: Network Traffic
+    serviceList: Service List
+    serviceDesc: Service Description
+    serviceState: Service State
+    diskList: Disk List
+    devicePath: Device Path
+    diskModel: Disk Model
+    diskSize: Disk Size
+    diskType: Disk Type
+    diskSerial: Serial Number
+    diskHealth: Health Status
+    online: Online
+    offline: Offline
+    unknown: Unknown
+    usage: Usage
+    of: of
+    total: Total
+    used: Used
+    free: Free
+    days: Days
+    hours: Hours
+    minutes: Minutes
+    seconds: Seconds
+    receive: Receive
+    transmit: Transmit
+    read: Read
+    write: Write
+    systemInfo: System Info
+    cpus: CPU(s)
+    bootMode: Boot Mode
+    repositoryStatus: Repository Status
+    noSystemInfo: No system information
+    noServiceInfo: No service information
+    ioDelay: IO delay
+    hdSpace: / HD space
+    resourceUsage: Resource Usage
+    noResourceUsage: No resource usage information
+    network: Network
+    networkName: Name
+    networkType: Type
+    networkActive: Active
+    networkAutostart: Autostart
+    networkVlanAware: VLAN aware
+    networkPorts: Ports/Slaves
+    networkBondMode: Bond Mode
+    networkCidr: CIDR
+    networkGateway: Gateway
+    networkComment: Comment
+    networkCreate: Create Network
+    networkEdit: Edit Network
+    networkDelete: Delete Network
+    networkRevert: Revert
+    networkReload: Reload
+    networkTypeBridge: Linux Bridge
+    networkTypeBond: Linux Bond
+    networkTypeEth: Network Device
+    networkTypeVlan: VLAN
+    networkBridgePorts: Bridge ports
+    networkBondSlaves: Slaves
+    networkAddress: IP Address
+    networkIpv4Cidr: IPv4/CIDR
+    networkIpv6Cidr: IPv6/CIDR
+    networkGatewayIpv4: Gateway (IPv4)
+    networkGatewayIpv6: Gateway (IPv6)
+    networkMtu: MTU
+    networkVlanIds: VLAN IDs
+    networkBondHashPolicy: Hash policy
+    networkBondPrimary: bond-primary
+    networkNamePlaceholder: Enter interface name, e.g. vmbr0
+    networkBridgePortsPlaceholder: Enter ports, e.g. eth0
+    networkBondSlavesPlaceholder: Enter slaves, e.g. eth0 eth1
+    networkIpv4CidrPlaceholder: e.g. 192.168.1.100/24
+    networkIpv6CidrPlaceholder: e.g. 2001:db8::1/64
+    networkGatewayIpv4Placeholder: e.g. 192.168.1.1
+    networkGatewayIpv6Placeholder: e.g. 2001:db8::1
+    networkVlanIdsPlaceholder: e.g. 60 63 64
+    networkBondPrimaryPlaceholder: e.g. eth0
+    networkCommentPlaceholder: Enter comment
+    networkNameRequired: Please enter interface name
+    networkTypeRequired: Please select network type
+    networkLoadFailed: Failed to load network configuration
+    networkCreateSuccess: Network configuration created successfully
+    networkCreateFailed: Failed to create network configuration
+    networkUpdateSuccess: Network configuration updated successfully
+    networkUpdateFailed: Failed to update network configuration
+    networkDeleteConfirm: Are you sure you want to delete network configuration '{name}'?
+    networkDeleteSuccess: Network configuration deleted successfully
+    networkDeleteFailed: Failed to delete network configuration
+    networkReloadConfirm: Are you sure you want to reload network configuration? This will apply all pending configuration changes.
+    networkReloadSuccess: Network configuration reloaded successfully
+    networkReloadFailed: Failed to reload network configuration
+    networkRevertConfirm: Are you sure you want to revert network configuration changes? This will undo all unapplied configuration changes.
+    networkRevertSuccess: Network configuration changes reverted successfully
+    networkRevertFailed: Failed to revert network configuration changes
+    noNetworkInfo: No network configuration information
+  # VM Management
+  vm:
+    title: VM Management
+    vmId: VM ID
+    vmName: VM Name
+    nodeName: Node Name
+    clusterName: Cluster Name
+    templateName: Template
+    cpuNum: CPU
+    memorySize: Memory
+    storage: Storage
+    vmUser: VM User
+    nodeIp: Node IP
+    vmStatus: VM Status
+    running: Running
+    stopped: Stopped
+    paused: Paused
+    powerOn: Power On
+    powerOff: Power Off
+    shutdown: Shutdown
+    reboot: Reboot
+    suspend: Suspend
+    resume: Resume
+    migrate: Migrate
+    destroy: Destroy
+    createVm: Create VM
+    editVm: Edit VM
+    deleteVm: Delete VM
+    vmDetail: VM Detail
+    vmConfig: VM Configuration
+    overview: Overview
+    hardwareConfig: Hardware
+    cloudinitConfig: Cloud-init
+    optionsConfig: Options
+    basicInfo: Basic Info
+    statusInfo: Status Info
+    monitoring: Monitoring
+    configKey: Config Key
+    configValue: Config Value
+    currentValue: Current Value
+    pendingValue: Pending Value
+    hasPending: Has Pending Configuration
+    noPending: No Pending Configuration
+    applyConfig: Apply Configuration
+    saveConfig: Save Configuration
+    configSaved: Configuration Saved
+    configApplied: Configuration Applied
+    cpuUsage: CPU Usage
+    memUsage: Memory Usage
+    netTraffic: Network Traffic
+    diskIo: Disk IO
+    haState: HA State
+    qemuVersion: QEMU Version
+    agent: Agent
+    balloon: Balloon
+    maxDisk: Max Disk
+    maxMem: Max Memory
+    netin: Net In
+    netout: Net Out
+    diskRead: Disk Read
+    diskWrite: Disk Write
+    uptime: Uptime
+    pid: Process ID
+    migrateVm: Migrate VM
+    targetNode: Target Node
+    onlineMigration: Online Migration
+    withLocalDisks: With Local Disks
+    migrationNetwork: Migration Network
+    bandwidthLimit: Bandwidth Limit
+    migrating: Migrating...
+    migrateSuccess: Migration Success
+    migrateFailed: Migration Failed
+    noCluster: VM not associated with cluster
+    noApiUrl: Cluster API URL does not exist
+    noTargetNode: Please select target node
+    confirmPowerOn: Are you sure to power on?
+    confirmShutdown: Are you sure to shutdown?
+    confirmPowerOnMessage: "Are you sure to power on VM \"{name}\"?"
+    confirmShutdownMessage: "Are you sure to shutdown VM \"{name}\"?\nPlease ensure business impact is under control."
+    riskWarning: Risk Warning
+    confirmPowerOnButton: Confirm Power On
+    confirmShutdownButton: Confirm Shutdown
+    powerOnCommandSent: Power on command sent
+    shutdownCommandSent: Shutdown command sent
+    powerOnFailed: Power on failed
+    shutdownFailed: Shutdown failed
+    backup: Backup
+    backupNow: Backup Now
+    createBackup: Create Backup
+    backupFile: Backup File
+    backupMode: Backup Mode
+    backupModeSnapshot: Snapshot Mode
+    backupModeSuspend: Suspend Mode
+    backupModeStop: Stop Mode
+    compressFormat: Compress Format
+    compressZst: zst (Recommended)
+    compressGz: gz
+    compressLzo: lzo
+    compressNone: No Compression
+    maxFiles: Max Files
+    backupTaskCreated: Backup task created
+    createBackupFailed: Create backup failed
+    noBackup: No backup
+    createTime: Create Time
+    deleteBackup: Delete Backup
+    deleteBackupConfirm: "Are you sure you want to remove entry '{volume}'? This will permanently erase all data."
+    deleteBackupSuccess: Backup deleted successfully
+    deleteBackupFailed: Delete backup failed
+    noCloudinitDevice: "No CloudInit device detected, please add CloudInit device drive first"
+    editIpConfig: "Edit: IP Config"
+    networkDevice: "Network Device"
+    ipv4Config: "IPv4 Configuration"
+    ipv4Mode: "IPv4 Mode"
+    ipv4Cidr: "IPv4/CIDR"
+    ipv4CidrPlaceholder: "e.g., 192.168.1.100/24"
+    ipv4Gateway: "Gateway (IPv4)"
+    ipv4GatewayPlaceholder: "e.g., 192.168.1.1"
+    ipv6Config: "IPv6 Configuration"
+    ipv6Mode: "IPv6 Mode"
+    ipv6Cidr: "IPv6/CIDR"
+    ipv6CidrPlaceholder: "e.g., 2001:db8::100/64"
+    ipv6Gateway: "Gateway (IPv6)"
+    ipv6GatewayPlaceholder: "e.g., 2001:db8::1"
+    static: "Static"
+    ipConfigSaved: "Configuration saved successfully"
+    ipConfigSaveFailed: "Failed to save configuration"
+    editDnsConfig: "Edit: DNS Config"
+    dnsDomain: "DNS domain"
+    dnsDomainPlaceholder: "e.g., example.com"
+    dnsServers: "DNS servers"
+    dnsServersPlaceholder: "e.g., 8.8.8.8 8.8.4.4"
+    editSshKeys: "Edit: SSH Keys"
+    sshPublicKey: "SSH public key"
+    sshPublicKeyPlaceholder: "Enter SSH public keys, one per line"
+    loadSshKeyFile: "Load SSH Key File"
+    editUpgradePackages: "Edit: Upgrade packages on boot"
+    upgradePackages: "Upgrade packages"
+    editUserConfig: "Edit: User Configuration"
+    editPasswordConfig: "Edit: Password Configuration"
+    configuration: "Configuration"
+    regenerateImage: "Regenerate Image"
+    regenerateImageConfirm: "Are you sure you want to regenerate the Cloud-Init image? This will reset all Cloud-Init configurations."
+    regenerateImageSuccess: "Cloud-Init image regenerated successfully"
+    regenerateImageFailed: "Failed to regenerate Cloud-Init image"
+    removeCloudinitConfirm: "Are you sure you want to remove the Cloud-Init device? This will remove all Cloud-Init configurations."
+    removeCloudinitSuccess: "Cloud-Init device removed successfully"
+    removeCloudinitFailed: "Failed to remove Cloud-Init device"
+    confirmReboot: Are you sure to reboot?
+    confirmDelete: Are you sure to delete this VM?
+    create:
+      basicInfo: Basic Info
+      osSettings: OS Settings
+      systemConfig: System Config
+      diskConfig: Disk Config
+      cpuMemory: CPU & Memory
+      networkConfig: Network Config
+      confirm: Confirm
+      createType: Create Type
+      fromTemplate: From Template
+      fromIso: From ISO Image
+      isoImage: ISO Image
+      guestOsType: Guest OS Type
+      kernel: Kernel Version
+      graphicCard: Graphics Card
+      scsiController: SCSI Controller
+      machine: Machine Type
+      qemuAgent: Qemu Agent
+      bios: BIOS
+      addTpm: Add TPM
+      sockets: CPU Sockets
+      cores: Cores per Socket
+      totalCores: Total Cores
+      cpuType: CPU Type
+      disk: Disk
+      diskSize: Disk Size
+      diskFormat: Disk Format
+      cacheMode: Cache Mode
+      addDisk: Add Disk
+      atLeastOneDisk: At least one disk is required
+      network: Network
+      bridge: Bridge
+      model: Model
+      vlanTag: VLAN Tag
+      macAddress: MAC Address
+      firewall: Firewall
+      addNetwork: Add Network
+      atLeastOneNetwork: At least one network is required
+      generate: Generate
+      autoGenerate: Auto Generate (leave empty)
+      diskCount: Disk Count
+      networkCount: Network Count
+      prevStep: Previous
+      nextStep: Next
+      pleaseInputVmName: Please enter VM name
+      pleaseSelectCluster: Please select cluster
+      pleaseSelectNode: Please select node
+      pleaseSelectTemplate: Please select template
+      pleaseSelectIso: Please select ISO image
+      pleaseConfigDisks: Please configure disks
+      pleaseConfigNetworks: Please configure networks
+      pleaseConfigNetwork: Please configure network
+      memoryAtLeast512MB: Memory must be at least 512MB
+      confirmCreateVm: Confirm create VM?
+      createSuccess: VM created successfully
+      createFailed: Failed to create VM
+      noNetworkDevice: No network device
+      pleaseSelectBridge: Please select bridge
+      noVlan: No VLAN
+      disconnect: Disconnect
+      mtu: MTU
+      mtuPlaceholder: e.g. 1500
+      mtuHint: 1 = Use bridge MTU
+      netModel: Network Model
+      netModelVirtio: VirtIO (paravirtualized)
+      netModelE1000: Intel E1000
+      netModelRtl8139: Realtek RTL8139
+      netModelIntelE1000: Intel E1000-82540EM
+      netModelVmxnet3: VMware vmxnet3
+      macAddressPlaceholder: auto
+      rateLimit: Rate limit (MB/s)
+      unlimited: Unlimited
+      rateLimitHint: 0 = Unlimited
+      multiqueue: Multiqueue
+      pleaseSetCpuNum: Please set CPU number
+      pleaseSetMemorySize: Please set memory size
+      pleaseSelectStorage: Please select storage
+      pleaseSelectDiskStorage: Please select disk storage
+      pleaseSetDiskSize: Please set disk size
+      pleaseSelectIsoStorage: Please select ISO storage
+      pleaseSelectOsType: Please select OS type
+      basicInfoTitle: Basic Info
+      clusterLabel: Cluster
+      nodeLabel: Node
+      vmNameLabel: VM Name
+      createModeLabel: Create Mode
+      templateClone: Template Clone
+      isoInstall: ISO Install
+      emptyVm: Empty VM
+      templateLabel: Template
+      fullClone: Full Clone
+      storageLabel: Storage
+      diskStorageLabel: Disk Storage
+      diskSizeLabel: Disk Size (GB)
+      isoStorageLabel: ISO Storage
+      isoImageLabel: ISO Image
+      cpuLabel: CPU Number
+      memoryLabel: Memory Size (MB)
+      osTypeLabel: OS Type
+      osTypeLinux: Linux (l26)
+      osTypeWindows: Windows (w10)
+      osTypeOther: Other
+      descriptionLabel: Description
+      startAfterCreated: Start after created
+      otherConfig: Other Config
+  # Dashboard
+  dashboard:
+    scopeAll: All Clusters
+    globalOverview: Global Overview
+    clusters: Clusters
+    nodes: Nodes
+    vms: VMs
+    storages: Storages
+    health: Health
+    healthHealthy: Healthy
+    healthWarning: Warning
+    healthCritical: Critical
+    resourceTitle: Resource Utilization (All Clusters)
+    cpuUsage: CPU Usage
+    memoryUsage: Memory Usage
+    storageUsage: Storage Usage
+    hotspotsRisks: Hotspots & Risks
+    topResourceConsumers: Top Resource Consumers
+    noData: No data
+    recentRisks: Recent Risks (24h)
+    noRisks: No risks
+    operationsInProgress: Operations in Progress
+    ongoingOperations: Ongoing Operations
+    noOperations: No operations
+    details: Details
+    noRunningTasks: No running tasks
+    opName: Operation
+    opType: Type
+    opStatus: Status
+    opProgress: Progress
+    resourceName: Resource Name
+    resourceType: Resource Type
+    resourceTypeVm: VM
+    resourceTypeNode: Node
+    resourceTypeStorage: Storage
+    metricType: Metric Type
+    metricTypeCpu: CPU
+    metricTypeMemory: Memory
+    metricTypeStorage: Storage
+    metricTypeIo: IO
+    metricTypeNetwork: Network
+    metricValue: Usage
+    quickActions: Quick Actions
+    quickCreateVm: + Create VM
+    quickMigrateVm: ↔ Migrate VM
+    quickNodeMaintenance: 🛠 Node Maintenance
+  # Storage Management
+  storage:
+    title: Storage Management
+    storageName: Storage Name
+    storageType: Storage Type
+    content: Content Type
+    capacity: Capacity
+    used: Used
+    available: Available
+    usageRate: Usage Rate
+    enabled: Enabled
+    shared: Shared
+    createStorage: Create Storage
+    editStorage: Edit Storage
+    deleteStorage: Delete Storage
+  # Template Management
+  template:
+    title: Template Management
+    templateName: Template Name
+    osType: OS Type
+    osVersion: OS Version
+    templateType: Template Type
+    sourceType: Source Type
+    proxmoxTemplateId: Proxmox Template ID
+    defaultCpu: Default CPU
+    defaultMemory: Default Memory
+    defaultDisk: Default Disk
+    createTemplate: Create Template
+    editTemplate: Edit Template
+    deleteTemplate: Delete Template
+    templateDetail: Template Detail
+    uploadTemplate: Import Template
+    importTemplate: Import Template
+    sync: Sync
+    syncTemplate: Sync Template
+    upload: Upload
+    selectFile: Select File
+    backupStorage: Backup Storage
+    targetStorage: Target Storage
+    backupFile: Backup File
+    pleaseSelectBackupStorage: Please select backup storage
+    pleaseSelectTargetStorage: Please select target storage
+    pleaseSelectBackupFile: Please select backup file
+    pleaseSelectBackupStorageFirst: Please select backup storage first
+    noBackupFiles: No backup files in this storage
+    importSuccess: Template imported successfully
+    importFailed: Template import failed
+    fetchBackupFilesFailed: Failed to fetch backup files
+    deleteConfirm: Confirm Delete
+    deleteConfirmMessage: "Are you sure to delete template \"{name}\"? This operation will also delete the underlying template to avoid dirty data."
+    deleteSuccess: Template deleted successfully
+    deleteFailed: Template delete failed
+    storage: Storage
+    fileName: File Name
+    fileSize: File Size
+    isShared: Shared Storage
+    uploadInfo: Upload Info
+    instances: Template Instances
+    isPrimary: Primary Instance
+    syncTasks: Sync Tasks
+    targetNode: Target Node
+    progress: Progress
+    retry: Retry
+    syncNodes: Sync Nodes
+    syncNodesPlaceholder: "Enter node IDs separated by commas, e.g: 1,2,3"
+    syncNodesHint: "Only local storage needs sync, shared storage is automatically available on all nodes"
+    syncNodesHintWithExcluded: "The node of selected storage has been automatically excluded from sync"
+    targetNodes: Target Nodes
+    pleaseInputTemplateName: Please input template name
+    pleaseSelectCluster: Please select cluster
+    pleaseSelectStorage: Please select storage
+    pleaseSelectFile: Please select file
+    pleaseSelectTargetNodes: Please select target nodes
+    pleaseSelectClusterFirst: Please select cluster first
+    pleaseSelectSyncNodes: Please select sync nodes
+    enableSync: Enable Sync
+    pleaseEnableSync: Please enable sync first
+    uploadSuccess: Template uploaded successfully
+    uploadFailed: Template upload failed
+    syncTaskCreated: Sync task created
+    syncFailed: Sync failed
+    retrySuccess: Retry successful
+    retryFailed: Retry failed
+    fetchListFailed: Failed to fetch template list
+    fetchDetailFailed: Failed to fetch template detail
