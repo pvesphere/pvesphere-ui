@@ -19,10 +19,16 @@ dist-ssr
 report.html
 vite.config.*.timestamp*
 
+# pnpm
+.pnpm-store
+.pnpm-debug.log*
+.pnpm-error.log*
+
+# npm/yarn
 yarn.lock
 npm-debug.log*
-.pnpm-error.log*
-.pnpm-debug.log
+
+# Test coverage
 tests/**/coverage/
 
 # Editor directories and files
