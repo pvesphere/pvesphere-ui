@@ -1,0 +1,803 @@
+buttons:
+  pureLoginOut: 退出系统
+  pureUserSettings: 用户设置
+  pureLogin: 登录
+  pureOpenSystemSet: 打开系统配置
+  pureReload: 重新加载
+  pureCloseCurrentTab: 关闭当前标签页
+  pureCloseLeftTabs: 关闭左侧标签页
+  pureCloseRightTabs: 关闭右侧标签页
+  pureCloseOtherTabs: 关闭其他标签页
+  pureCloseAllTabs: 关闭全部标签页
+  pureContentFullScreen: 内容区全屏
+  pureContentExitFullScreen: 内容区退出全屏
+  pureClickCollapse: 点击折叠
+  pureClickExpand: 点击展开
+  pureConfirm: 确认
+  pureSwitch: 切换
+  pureClose: 关闭
+  pureBackTop: 回到顶部
+  pureOpenText: 开
+  pureCloseText: 关
+search:
+  pureTotal: 共
+  pureHistory: 搜索历史
+  pureCollect: 收藏
+  pureDragSort: （可拖拽排序）
+  pureEmpty: 暂无搜索结果
+  purePlaceholder: 搜索菜单（支持拼音搜索）
+panel:
+  pureSystemSet: 系统配置
+  pureCloseSystemSet: 关闭配置
+  pureClearCacheAndToLogin: 清空缓存并返回登录页
+  pureClearCache: 清空缓存
+  pureOverallStyle: 整体风格
+  pureOverallStyleLight: 浅色
+  pureOverallStyleLightTip: 清新启航，点亮舒适的工作界面
+  pureOverallStyleDark: 深色
+  pureOverallStyleDarkTip: 月光序曲，沉醉于夜的静谧雅致
+  pureOverallStyleSystem: 自动
+  pureOverallStyleSystemTip: 同步时光，界面随晨昏自然呼应
+  pureThemeColor: 主题色
+  pureLayoutModel: 导航模式
+  pureVerticalTip: 左侧菜单，亲切熟悉
+  pureHorizontalTip: 顶部菜单，简洁概览
+  pureMixTip: 混合菜单，灵活多变
+  pureStretch: 页宽
+  pureStretchFixed: 固定
+  pureStretchFixedTip: 紧凑页面，轻松找到所需信息
+  pureStretchCustom: 自定义
+  pureStretchCustomTip: 最小1280、最大1600
+  pureTagsStyle: 页签风格
+  pureTagsStyleSmart: 灵动
+  pureTagsStyleSmartTip: 灵动标签，添趣生辉
+  pureTagsStyleCard: 卡片
+  pureTagsStyleCardTip: 卡片标签，高效浏览
+  pureTagsStyleChrome: 谷歌
+  pureTagsStyleChromeTip: 谷歌风格，经典美观
+  pureInterfaceDisplay: 界面显示
+  pureGreyModel: 灰色模式
+  pureWeakModel: 色弱模式
+  pureHiddenTags: 隐藏标签页
+  pureHiddenFooter: 隐藏页脚
+  pureMultiTagsCache: 页签持久化
+menus:
+  pureHome: 首页
+  pureLogin: 登录
+  pureAbnormal: 异常页面
+  purePageNotFound: "404"
+  pureAccessDenied: "403"
+  pureServerError: "500"
+  purePermission: 权限管理
+  purePermissionPage: 页面权限
+  purePermissionButton: 按钮权限
+  purePermissionButtonRouter: 路由返回按钮权限
+  purePermissionButtonLogin: 登录接口返回按钮权限
+  purePveManagement: PVE 管理
+  purePveOverview: 资源总览
+  purePveDatacenter: 数据中心
+  purePveNodes: 节点
+  purePveVms: 虚拟机
+  purePveStorage: 存储
+  purePveNetworks: 网络管理
+  purePveTemplates: 模板
+  purePveSnapshots: 快照管理
+  purePveBackups: 备份管理
+  purePveRestore: 恢复管理
+status:
+  pureLoad: 加载中...
+  pureMessage: 消息
+  pureNotify: 通知
+  pureTodo: 待办
+  pureNoMessage: 暂无消息
+  pureNoNotify: 暂无通知
+  pureNoTodo: 暂无待办
+login:
+  pureUsername: 账号
+  purePassword: 密码
+  pureLogin: 登录
+  pureLoginSuccess: 登录成功
+  pureLoginFail: 登录失败
+  pureLoginFailTip: 登录失败，请检查邮箱和密码是否正确
+  pureUsernameReg: 请输入账号
+  purePassWordReg: 请输入密码
+  purePassWordRuleReg: 密码格式应为8-18位数字、字母、符号的任意两种组合
+  pureRegister: 注册账号
+user:
+  settings:
+    title: 用户设置
+    email: 邮箱
+    nickname: 昵称
+    nicknamePlaceholder: 请输入昵称
+    nicknameRequired: 请输入昵称
+    nicknameLength: 昵称长度在 1 到 50 个字符
+    changePassword: 修改密码
+    oldPassword: 当前密码
+    oldPasswordPlaceholder: 请输入当前密码
+    oldPasswordRequired: 修改密码需要输入当前密码
+    newPassword: 新密码
+    newPasswordPlaceholder: 请输入新密码（留空则不修改）
+    confirmPassword: 确认新密码
+    confirmPasswordPlaceholder: 请再次输入新密码
+    confirmPasswordRequired: 请再次输入新密码
+    confirmPasswordMismatch: 两次输入的密码不一致
+    passwordRule: 密码格式应为8-18位数字、字母、符号的任意两种组合
+    save: 保存
+    reset: 重置
+    saveSuccess: 保存成功
+    saveFailed: 保存失败
+    getUserInfoFailed: 获取用户信息失败
+# PVE相关
+pve:
+  # 通用
+  common:
+    search: 搜索
+    reset: 重置
+    create: 创建
+    edit: 编辑
+    delete: 删除
+    remove: 删除
+    save: 保存
+    cancel: 取消
+    confirm: 确认
+    close: 关闭
+    refresh: 刷新
+    operate: 操作
+    status: 状态
+    name: 名称
+    description: 描述
+    createTime: 创建时间
+    updateTime: 更新时间
+    loading: 加载中...
+    noData: 暂无数据
+    success: 操作成功
+    failed: 操作失败
+    confirmDelete: 确定要删除吗？
+    deleteSuccess: 删除成功
+    deleteFailed: 删除失败
+    createSuccess: 创建成功
+    createFailed: 创建失败
+    updateSuccess: 更新成功
+    updateFailed: 更新失败
+    pleaseSelect: 请选择
+    pleaseInput: 请输入
+    lengthBetween: "长度在 {min} 到 {max} 个字符"
+    yes: 是
+    no: 否
+    backendLogin: 后台登录
+    consoleLogin: 控制台
+    more: 更多
+    detail: 详情
+  # 集群管理
+  cluster:
+    title: 集群管理
+    clusterName: 集群名称
+    apiUrl: API地址
+    username: 用户名
+    password: 密码
+    tokenId: Token ID
+    tokenSecret: Token Secret
+    authType: 认证类型
+    nodeCount: 节点数量
+    vmCount: 虚拟机数量
+    createCluster: 创建集群
+    editCluster: 编辑集群
+    deleteCluster: 删除集群
+    clusterInfo: 集群信息
+    clusterNodes: 集群节点
+    clusterTasks: 集群任务
+    taskList: 任务列表
+    taskId: 任务ID
+    taskType: 任务类型
+    taskStatus: 任务状态
+    taskNode: 执行节点
+    taskStartTime: 开始时间
+    taskEndTime: 结束时间
+    taskUpid: UPID
+    running: 运行中
+    stopped: 已停止
+    noClusterSelected: 请选择集群
+    noTasksAvailable: 暂无任务数据
+    addCluster: 添加集群
+    enable: 启用
+    disable: 禁用
+    enabled: 启用
+    disabled: 禁用
+    verifyApi: 验证API
+    verifyingApi: 验证API中...
+    confirmEnable: 确认启用
+    confirmDisable: 确认禁用
+    confirmEnableMessage: "确定要启用集群 \"{name}\" 吗？"
+    confirmDisableMessage: "确定要禁用集群 \"{name}\" 吗？"
+    enableSuccess: 启用集群成功
+    enableFailed: 启用集群失败
+    disableSuccess: 禁用集群成功
+    disableFailed: 禁用集群失败
+    verifyApiSuccess: API连接成功
+    verifyApiFailed: API连接失败
+    verifyApiAfterSave: 请先保存集群后再验证API
+    pleaseInputApiCredentials: 请先输入API地址、用户ID和用户Token
+    deleteConfirm: 确认删除
+    deleteConfirmMessage: "确定要删除集群 \"{name}\" 吗？\n\n注意：删除集群将同时删除关联的节点、虚拟机等数据。"
+    datacenter: 数据中心
+    region: 区域
+    version: 版本
+    createSuccess: 创建集群成功
+    createFailed: 创建集群失败
+    updateSuccess: 更新集群成功
+    updateFailed: 更新集群失败
+    clusterNameAlias: 集群别名
+    envLabel: 环境
+    datacenterLabel: 数据中心
+    apiUrlLabel: API地址
+    regionLabel: 区域
+    isSchedulable: 是否可调度
+    isEnabled: 是否启用
+    userId: 用户ID
+    userToken: 用户Token
+    pleaseInputClusterName: 请输入集群名称
+    pleaseInputClusterNameAlias: 请输入集群别名
+    pleaseInputEnv: 请输入环境
+    pleaseInputDatacenter: 请输入数据中心
+    pleaseInputApiUrl: 请输入API地址
+    pleaseInputRegion: 请输入区域
+    pleaseInputUserId: 请输入用户ID
+    pleaseInputUserToken: 请输入用户Token
+    clusterNameRequired: 集群名称不能为空
+    clusterNameAliasRequired: 集群别名不能为空
+    envRequired: 环境不能为空
+    datacenterRequired: 数据中心不能为空
+    apiUrlRequired: API地址不能为空
+    regionRequired: 区域不能为空
+    userIdRequired: 用户ID不能为空
+    userTokenRequired: 用户Token不能为空
+    apiUrlInvalid: 请输入有效的URL地址（以http://或https://开头）
+    saveSuccess: 保存成功
+    saveFailed: 保存失败
+  # 节点管理
+  node:
+    title: 节点管理
+    nodeName: 节点名称
+    ipAddress: IP地址
+    clusterName: 所属集群
+    vmLimit: 虚拟机限制
+    env: Env
+    schedulable: 调度状态
+    schedulableEnabled: 已开启
+    schedulableDisabled: 已关闭
+    enableSchedule: 开启调度
+    disableSchedule: 关闭调度
+    scheduleEnabled: 已开启调度
+    scheduleDisabled: 已关闭调度
+    annotations: 注释
+    nodeDetail: 节点详情
+    overview: 概览
+    services: 系统服务
+    disks: 磁盘
+    basicInfo: 基本信息
+    nodeStatus: 节点状态
+    monitoring: 监控数据
+    cpuUsage: CPU使用率
+    memUsage: 内存使用率
+    swapUsage: SWAP使用率
+    ksmSharing: KSM共享
+    loadAverage: 负载均值
+    uptime: 运行时长
+    kernelVersion: 内核版本
+    pveVersion: PVE版本
+    serviceName: 服务名称
+    serviceRunning: 运行中
+    serviceStopped: 已停止
+    serviceStart: 启动
+    serviceStop: 停止
+    serviceRestart: 重启
+    serviceStartSuccess: 服务启动成功
+    serviceStartFailed: 服务启动失败
+    serviceStopConfirm: "确定要停止服务「{name}」吗？"
+    serviceStopSuccess: 服务停止成功
+    serviceStopFailed: 服务停止失败
+    serviceRestartConfirm: "确定要重启服务「{name}」吗？"
+    serviceRestartSuccess: 服务重启成功
+    serviceRestartFailed: 服务重启失败
+    cpuModel: CPU型号
+    cpuCores: CPU核心数
+    cpuSockets: CPU插槽数
+    console: 控制台
+    maintenance: 主机维护
+    reboot: 重启
+    shutdown: 关闭
+    confirmReboot: 确认重启
+    confirmShutdown: 确认关闭
+    confirmRebootMessage: "确定要重启节点 \"{name}\" 吗？"
+    confirmShutdownMessage: "确定要关闭节点 \"{name}\" 吗？"
+    rebootCommandSent: 节点重启命令已发送
+    shutdownCommandSent: 节点关闭命令已发送
+    rebootFailed: 重启节点失败
+    shutdownFailed: 关闭节点失败
+    consoleNotImplemented: Console 功能暂未实现
+    maintenanceNotImplemented: 主机维护功能暂未实现
+    noClusterForBackend: 节点未关联集群，无法跳转
+    noApiUrlForBackend: 集群 API URL 不存在，无法跳转
+    updateVMLimitSuccess: 更新虚拟机限制成功
+    updateVMLimitFailed: 更新虚拟机限制失败
+    networkTraffic: 网络流量
+    serviceList: 服务列表
+    serviceDesc: 服务描述
+    serviceState: 服务状态
+    diskList: 磁盘列表
+    devicePath: 设备路径
+    diskModel: 磁盘型号
+    diskSize: 磁盘大小
+    diskType: 磁盘类型
+    diskSerial: 序列号
+    diskHealth: 健康状态
+    online: 在线
+    offline: 离线
+    unknown: 未知
+    usage: 使用量
+    of: 的
+    total: 总计
+    used: 已使用
+    free: 可用
+    days: 天
+    hours: 小时
+    minutes: 分钟
+    seconds: 秒
+    receive: 接收
+    transmit: 发送
+    read: 读取
+    write: 写入
+    systemInfo: 系统信息
+    cpus: CPU(s)
+    bootMode: Boot Mode
+    repositoryStatus: Repository Status
+    noSystemInfo: 暂无系统信息
+    noServiceInfo: 暂无系统服务信息
+    ioDelay: IO delay
+    hdSpace: / HD space
+    resourceUsage: 资源使用情况
+    noResourceUsage: 暂无资源使用情况
+    network: 网络
+    networkName: 名称
+    networkType: 类型
+    networkActive: Active
+    networkAutostart: Autostart
+    networkVlanAware: VLAN aware
+    networkPorts: Ports/Slaves
+    networkBondMode: Bond Mode
+    networkCidr: CIDR
+    networkGateway: Gateway
+    networkComment: Comment
+    networkCreate: 创建网络配置
+    networkEdit: 编辑网络配置
+    networkDelete: 删除网络配置
+    networkRevert: 恢复
+    networkReload: 重新加载
+    networkTypeBridge: Linux Bridge
+    networkTypeBond: Linux Bond
+    networkTypeEth: Network Device
+    networkTypeVlan: VLAN
+    networkBridgePorts: Bridge ports
+    networkBondSlaves: Slaves
+    networkAddress: IP Address
+    networkIpv4Cidr: IPv4/CIDR
+    networkIpv6Cidr: IPv6/CIDR
+    networkGatewayIpv4: Gateway (IPv4)
+    networkGatewayIpv6: Gateway (IPv6)
+    networkMtu: MTU
+    networkVlanIds: VLAN IDs
+    networkBondHashPolicy: Hash policy
+    networkBondPrimary: bond-primary
+    networkNamePlaceholder: 请输入接口名称，如 vmbr0
+    networkBridgePortsPlaceholder: 请输入端口，如 eth0
+    networkBondSlavesPlaceholder: 请输入从属接口，如 eth0 eth1
+    networkIpv4CidrPlaceholder: 如 192.168.1.100/24
+    networkIpv6CidrPlaceholder: 如 2001:db8::1/64
+    networkGatewayIpv4Placeholder: 如 192.168.1.1
+    networkGatewayIpv6Placeholder: 如 2001:db8::1
+    networkVlanIdsPlaceholder: 如 60 63 64
+    networkBondPrimaryPlaceholder: 如 eth0
+    networkCommentPlaceholder: 请输入注释
+    networkNameRequired: 请输入接口名称
+    networkTypeRequired: 请选择网络类型
+    networkLoadFailed: 获取网络配置失败
+    networkCreateSuccess: 创建网络配置成功
+    networkCreateFailed: 创建网络配置失败
+    networkUpdateSuccess: 更新网络配置成功
+    networkUpdateFailed: 更新网络配置失败
+    networkDeleteConfirm: "确定要删除网络配置「{name}」吗？"
+    networkDeleteSuccess: 删除网络配置成功
+    networkDeleteFailed: 删除网络配置失败
+    networkReloadConfirm: 确定要重新加载网络配置吗？这将应用所有待应用的配置更改。
+    networkReloadSuccess: 重新加载网络配置成功
+    networkReloadFailed: 重新加载网络配置失败
+    networkRevertConfirm: 确定要恢复网络配置更改吗？这将撤销所有未应用的配置更改。
+    networkRevertSuccess: 恢复网络配置更改成功
+    networkRevertFailed: 恢复网络配置更改失败
+    noNetworkInfo: 暂无网络配置信息
+  # 虚拟机管理
+  vm:
+    title: 虚拟机管理
+    vmId: 虚拟机ID
+    vmName: 虚拟机名称
+    nodeName: 所属节点
+    clusterName: 所属集群
+    templateName: 使用模板
+    cpuNum: CPU
+    memorySize: 内存
+    storage: 存储
+    vmUser: 虚拟机用户
+    nodeIp: 节点IP
+    vmStatus: 虚拟机状态
+    running: 运行中
+    stopped: 已停止
+    paused: 已暂停
+    powerOn: 开机
+    powerOff: 关机
+    shutdown: 关机
+    reboot: 重启
+    suspend: 挂起
+    resume: 恢复
+    migrate: 迁移
+    destroy: 销毁
+    createVm: 创建虚拟机
+    editVm: 编辑虚拟机
+    deleteVm: 删除虚拟机
+    vmDetail: 虚拟机详情
+    vmConfig: 虚拟机配置
+    overview: 概览
+    hardwareConfig: 硬件配置
+    cloudinitConfig: Cloud-init配置
+    optionsConfig: 选项配置
+    basicInfo: 基本信息
+    statusInfo: 状态信息
+    monitoring: 监控数据
+    configKey: 配置项
+    configValue: 配置值
+    currentValue: 当前值
+    pendingValue: 待生效值
+    hasPending: 有待生效的配置
+    noPending: 无待生效配置
+    applyConfig: 应用配置
+    saveConfig: 保存配置
+    configSaved: 配置已保存
+    configApplied: 配置已应用
+    cpuUsage: CPU使用率
+    memUsage: 内存使用率
+    netTraffic: 网络流量
+    diskIo: 磁盘IO
+    haState: HA状态
+    qemuVersion: QEMU版本
+    agent: Agent
+    balloon: 内存气球
+    maxDisk: 最大磁盘
+    maxMem: 最大内存
+    netin: 入站流量
+    netout: 出站流量
+    diskRead: 磁盘读取
+    diskWrite: 磁盘写入
+    uptime: 运行时长
+    pid: 进程ID
+    migrateVm: 迁移虚拟机
+    targetNode: 目标节点
+    onlineMigration: 在线迁移
+    withLocalDisks: 包含本地磁盘
+    migrationNetwork: 迁移网络
+    bandwidthLimit: 带宽限制
+    migrating: 迁移中...
+    migrateSuccess: 迁移成功
+    migrateFailed: 迁移失败
+    noCluster: 虚拟机未关联集群，无法跳转
+    noApiUrl: 集群API URL不存在，无法跳转
+    noTargetNode: 请选择目标节点
+    confirmPowerOn: 确定要开机吗？
+    confirmShutdown: 确定要关机吗？
+    confirmPowerOnMessage: "确认对虚拟机「{name}」执行开机操作？"
+    confirmShutdownMessage: "确认对虚拟机「{name}」执行关机操作？\n建议确保业务影响可控。"
+    riskWarning: 风险提示
+    confirmPowerOnButton: 确认开机
+    confirmShutdownButton: 确认关机
+    powerOnCommandSent: 已发送开机指令
+    shutdownCommandSent: 已发送关机指令
+    powerOnFailed: 开机失败
+    shutdownFailed: 关机失败
+    confirmReboot: 确定要重启吗？
+    backup: 备份
+    backupNow: Backup Now
+    createBackup: 创建备份
+    backupFile: 备份文件
+    backupMode: 备份模式
+    backupModeSnapshot: 快照模式
+    backupModeSuspend: 挂起模式
+    backupModeStop: 停止模式
+    compressFormat: 压缩格式
+    compressZst: zst (推荐)
+    compressGz: gz
+    compressLzo: lzo
+    compressNone: 无压缩
+    maxFiles: 最大保留文件数
+    backupTaskCreated: 备份任务已创建
+    createBackupFailed: 创建备份失败
+    noBackup: 暂无备份
+    createTime: 创建时间
+    deleteBackup: 删除备份
+    deleteBackupConfirm: "Are you sure you want to remove entry '{volume}'? This will permanently erase all data."
+    deleteBackupSuccess: 备份删除成功
+    deleteBackupFailed: 删除备份失败
+    noCloudinitDevice: 未检测到 CloudInit 设备，请先添加 CloudInit 设备驱动
+    editIpConfig: "Edit: IP Config"
+    networkDevice: 网络设备
+    ipv4Config: IPv4 配置
+    ipv4Mode: IPv4 模式
+    ipv4Cidr: IPv4/CIDR
+    ipv4CidrPlaceholder: "例如: 192.168.1.100/24"
+    ipv4Gateway: 网关 (IPv4)
+    ipv4GatewayPlaceholder: "例如: 192.168.1.1"
+    ipv6Config: IPv6 配置
+    ipv6Mode: IPv6 模式
+    ipv6Cidr: IPv6/CIDR
+    ipv6CidrPlaceholder: "例如: 2001:db8::100/64"
+    ipv6Gateway: 网关 (IPv6)
+    ipv6GatewayPlaceholder: "例如: 2001:db8::1"
+    static: 静态
+    ipConfigSaved: 配置保存成功
+    ipConfigSaveFailed: 配置保存失败
+    editDnsConfig: "Edit: DNS Config"
+    dnsDomain: DNS domain
+    dnsDomainPlaceholder: "例如: example.com"
+    dnsServers: DNS servers
+    dnsServersPlaceholder: "例如: 8.8.8.8 8.8.4.4"
+    editSshKeys: 编辑 SSH Keys
+    sshPublicKey: SSH public key
+    sshPublicKeyPlaceholder: "请输入 SSH 公钥，每行一个"
+    loadSshKeyFile: 加载 SSH Key 文件
+    editUpgradePackages: "Edit: Upgrade packages on boot"
+    upgradePackages: Upgrade packages
+    editUserConfig: "Edit: User Configuration"
+    editPasswordConfig: "Edit: Password Configuration"
+    configuration: Configuration
+    regenerateImage: Regenerate Image
+    regenerateImageConfirm: 确定要重新生成 Cloud-Init 镜像吗？这将重置所有 Cloud-Init 配置。
+    regenerateImageSuccess: Cloud-Init 镜像重新生成成功
+    regenerateImageFailed: 重新生成 Cloud-Init 镜像失败
+    removeCloudinitConfirm: 确定要删除 Cloud-Init 设备吗？这将移除所有 Cloud-Init 配置。
+    removeCloudinitSuccess: Cloud-Init 设备删除成功
+    removeCloudinitFailed: 删除 Cloud-Init 设备失败
+    confirmDelete: 确定要删除该虚拟机吗？
+    # 创建虚拟机相关
+    create:
+      basicInfo: 基本信息
+      osSettings: OS设置
+      systemConfig: 系统配置
+      diskConfig: 磁盘配置
+      cpuMemory: CPU和内存
+      networkConfig: 网络配置
+      confirm: 配置确认
+      createType: 创建方式
+      fromTemplate: 从模板创建
+      fromIso: 从ISO镜像创建
+      isoImage: ISO镜像
+      guestOsType: Guest OS类型
+      kernel: 内核版本
+      graphicCard: 显卡
+      scsiController: SCSI控制器
+      machine: 机器类型
+      qemuAgent: Qemu Agent
+      bios: BIOS
+      addTpm: 添加TPM
+      sockets: CPU插槽数
+      cores: 每插槽核心数
+      totalCores: 总核心数
+      cpuType: CPU类型
+      disk: 磁盘
+      diskSize: 磁盘大小
+      diskFormat: 磁盘格式
+      cacheMode: 缓存模式
+      addDisk: 添加磁盘
+      atLeastOneDisk: 至少需要保留一个磁盘
+      network: 网卡
+      bridge: 网桥
+      model: 网卡型号
+      vlanTag: VLAN标签
+      macAddress: MAC地址
+      firewall: 防火墙
+      addNetwork: 添加网卡
+      atLeastOneNetwork: 至少需要保留一个网卡
+      generate: 生成
+      autoGenerate: 自动生成（留空）
+      diskCount: 磁盘数量
+      networkCount: 网卡数量
+      prevStep: 上一步
+      nextStep: 下一步
+      pleaseInputVmName: 请输入虚拟机名称
+      pleaseSelectCluster: 请选择集群
+      pleaseSelectNode: 请选择节点
+      pleaseSelectTemplate: 请选择模板
+      pleaseSelectIso: 请选择ISO镜像
+      pleaseConfigDisks: 请配置磁盘
+      pleaseConfigNetworks: 请配置网络
+      pleaseConfigNetwork: 请配置网络
+      memoryAtLeast512MB: 内存至少需要512MB
+      confirmCreateVm: 确认创建虚拟机？
+      createSuccess: 创建虚拟机成功
+      createFailed: 创建虚拟机失败
+      noNetworkDevice: 无网络设备
+      pleaseSelectBridge: 请选择网桥
+      noVlan: 无VLAN
+      disconnect: 断开连接
+      mtu: MTU
+      mtuPlaceholder: "例如: 1500"
+      mtuHint: "1 = 使用网桥MTU"
+      netModel: 网卡型号
+      netModelVirtio: VirtIO (半虚拟化)
+      netModelE1000: Intel E1000
+      netModelRtl8139: Realtek RTL8139
+      netModelIntelE1000: Intel E1000-82540EM
+      netModelVmxnet3: VMware vmxnet3
+      macAddressPlaceholder: auto
+      rateLimit: 速率限制 (MB/s)
+      unlimited: 无限制
+      rateLimitHint: "0 = 无限制"
+      multiqueue: 多队列
+      pleaseSetCpuNum: 请设置CPU数量
+      pleaseSetMemorySize: 请设置内存大小
+      pleaseSelectStorage: 请选择存储
+      pleaseSelectDiskStorage: 请选择磁盘存储
+      pleaseSetDiskSize: 请设置磁盘大小
+      pleaseSelectIsoStorage: 请选择ISO存储
+      pleaseSelectOsType: 请选择OS类型
+      basicInfoTitle: 基本信息
+      clusterLabel: 集群
+      nodeLabel: 节点
+      vmNameLabel: 虚拟机名称
+      createModeLabel: 创建方式
+      templateClone: 模板克隆
+      isoInstall: 基于ISO安装
+      emptyVm: 创建空虚拟机
+      templateLabel: 模板
+      fullClone: Full Clone
+      storageLabel: 存储
+      diskStorageLabel: 磁盘存储
+      diskSizeLabel: 磁盘大小(GB)
+      isoStorageLabel: ISO存储
+      isoImageLabel: ISO镜像
+      cpuLabel: CPU数量
+      memoryLabel: 内存大小(MB)
+      osTypeLabel: OS类型
+      osTypeLinux: Linux (l26)
+      osTypeWindows: Windows (w10)
+      osTypeOther: Other
+      descriptionLabel: 描述
+      startAfterCreated: 创建后自动启动
+      otherConfig: 其他配置
+  # Dashboard
+  dashboard:
+    scopeAll: 全部集群
+    globalOverview: 全局概览
+    clusters: 集群
+    nodes: 节点
+    vms: 虚拟机
+    storages: 存储
+    health: 健康状态
+    healthHealthy: 正常
+    healthWarning: 警告
+    healthCritical: 严重
+    resourceTitle: 资源态势（全部集群）
+    cpuUsage: CPU 使用率
+    memoryUsage: 内存使用率
+    storageUsage: 存储使用率
+    hotspotsRisks: 压力与风险焦点
+    topResourceConsumers: 资源压力 Top
+    noData: 暂无数据
+    recentRisks: 近期风险（24 小时）
+    noRisks: 暂无风险
+    operationsInProgress: 运行中事务
+    ongoingOperations: 进行中的事务
+    noOperations: 暂无事务
+    details: 详情
+    noRunningTasks: 暂无运行中的任务
+    opName: 操作
+    opType: 类型
+    opStatus: 状态
+    opProgress: 进度
+    resourceName: 资源名称
+    resourceType: 资源类型
+    resourceTypeVm: VM
+    resourceTypeNode: Node
+    resourceTypeStorage: Storage
+    metricType: 指标类型
+    metricTypeCpu: CPU
+    metricTypeMemory: Memory
+    metricTypeStorage: Storage
+    metricTypeIo: IO
+    metricTypeNetwork: Network
+    metricValue: 使用率
+    quickActions: 快捷操作
+    quickCreateVm: 创建虚拟机
+    quickMigrateVm: 迁移虚拟机
+    quickNodeMaintenance: 节点维护
+  # 存储管理
+  storage:
+    title: 存储管理
+    storageName: 存储名称
+    storageType: 存储类型
+    content: 内容类型
+    capacity: 总容量
+    used: 已使用
+    available: 可用空间
+    usageRate: 使用率
+    enabled: 启用状态
+    shared: 共享存储
+    createStorage: 创建存储
+    editStorage: 编辑存储
+    deleteStorage: 删除存储
+  # 模板管理
+  template:
+    title: 模板管理
+    templateName: 模板名称
+    osType: 操作系统类型
+    osVersion: 操作系统版本
+    templateType: 模板类型
+    sourceType: 来源类型
+    proxmoxTemplateId: Proxmox模板ID
+    defaultCpu: 默认CPU
+    defaultMemory: 默认内存
+    defaultDisk: 默认磁盘
+    createTemplate: 创建模板
+    editTemplate: 编辑模板
+    deleteTemplate: 删除模板
+    templateDetail: 模板详情
+    uploadTemplate: 导入模板
+    importTemplate: 导入模板
+    sync: 同步
+    syncTemplate: 同步模板
+    upload: 上传
+    selectFile: 选择文件
+    backupStorage: 备份存储
+    targetStorage: 目标存储
+    backupFile: 备份文件
+    pleaseSelectBackupStorage: 请选择备份存储
+    pleaseSelectTargetStorage: 请选择目标存储
+    pleaseSelectBackupFile: 请选择备份文件
+    pleaseSelectBackupStorageFirst: 请先选择备份存储
+    noBackupFiles: 该存储中没有备份文件
+    importSuccess: 模板导入成功
+    importFailed: 模板导入失败
+    fetchBackupFilesFailed: 获取备份文件列表失败
+    deleteConfirm: 确认删除
+    deleteConfirmMessage: "确认删除模板「{name}」？此操作将同时删除底层模板，避免产生脏数据。"
+    deleteSuccess: 模板删除成功
+    deleteFailed: 模板删除失败
+    storage: 存储
+    fileName: 文件名
+    fileSize: 文件大小
+    isShared: 共享存储
+    uploadInfo: 上传信息
+    instances: 模板实例
+    isPrimary: 主实例
+    syncTasks: 同步任务
+    targetNode: 目标节点
+    progress: 进度
+    retry: 重试
+    syncNodes: 同步节点
+    syncNodesPlaceholder: "请输入节点ID，多个用逗号分隔，如: 1,2,3"
+    syncNodesHint: "仅本地存储需要同步，共享存储会自动在所有节点可用"
+    syncNodesHintWithExcluded: "已选择存储的节点已自动排除，无需同步"
+    targetNodes: 目标节点
+    pleaseInputTemplateName: 请输入模板名称
+    pleaseSelectCluster: 请选择集群
+    pleaseSelectStorage: 请选择存储
+    pleaseSelectFile: 请选择文件
+    pleaseSelectTargetNodes: 请选择目标节点
+    pleaseSelectClusterFirst: 请先选择集群
+    pleaseSelectSyncNodes: 请选择同步节点
+    enableSync: 启用同步
+    pleaseEnableSync: 请先启用同步
+    uploadSuccess: 模板上传成功
+    uploadFailed: 模板上传失败
+    syncTaskCreated: 同步任务已创建
+    syncFailed: 同步失败
+    retrySuccess: 重试成功
+    retryFailed: 重试失败
+    fetchListFailed: 获取模板列表失败
+    fetchDetailFailed: 获取模板详情失败
