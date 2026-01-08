@@ -29,6 +29,8 @@ import LogoutCircleRLine from "~icons/ri/logout-circle-r-line";
 import Setting from "~icons/ri/settings-3-line";
 import UserSettings from "~icons/ri/user-settings-line";
 import Check from "~icons/ep/check";
+import Github from "~icons/ri/github-fill";
+import Book from "~icons/ri/book-open-line";
 import { useRouter } from "vue-router";
 
 const {
@@ -72,6 +74,26 @@ const goToUserSettings = () => {
     <div v-if="layout === 'vertical'" class="vertical-header-right">
       <!-- 菜单搜索 -->
       <LaySearch id="header-search" />
+      <!-- GitHub 仓库 -->
+      <a
+        href="https://github.com/pvesphere/pvesphere"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="navbar-bg-hover w-[40px] h-[48px] p-[11px] cursor-pointer outline-hidden flex items-center justify-center"
+        title="GitHub Repository"
+      >
+        <IconifyIconOffline :icon="Github" class="w-[18px] h-[18px]" />
+      </a>
+      <!-- 官方文档 -->
+      <a
+        href="https://docs.pvesphere.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="navbar-bg-hover w-[40px] h-[48px] p-[11px] cursor-pointer outline-hidden flex items-center justify-center"
+        title="Documentation"
+      >
+        <IconifyIconOffline :icon="Book" class="w-[18px] h-[18px]" />
+      </a>
       <!-- 国际化 -->
       <el-dropdown id="header-translation" trigger="click">
         <GlobalizationIcon
@@ -117,10 +139,7 @@ const goToUserSettings = () => {
         <template #dropdown>
           <el-dropdown-menu class="logout">
             <el-dropdown-item @click="goToUserSettings">
-              <IconifyIconOffline
-                :icon="UserSettings"
-                style="margin: 5px"
-              />
+              <IconifyIconOffline :icon="UserSettings" style="margin: 5px" />
               {{ t("buttons.pureUserSettings") }}
             </el-dropdown-item>
             <el-dropdown-item @click="logout">
@@ -164,6 +183,18 @@ const goToUserSettings = () => {
     min-width: 280px;
     height: 48px;
     color: #000000d9;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: inherit;
+      }
+    }
 
     .el-dropdown-link {
       display: flex;
