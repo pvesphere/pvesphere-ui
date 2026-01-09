@@ -29,12 +29,13 @@ import { stringify } from "qs";
 import { getToken, formatToken } from "@/utils/auth";
 import { useUserStoreHook } from "@/store/modules/user";
 
-// 相关配置请参考：www.axios-js.com/zh-cn/docs/#axios-request-config-1
 const defaultConfig: AxiosRequestConfig = {
   // 后端API基础地址 - 开发环境使用代理（baseURL为空），生产环境使用环境变量
   baseURL: import.meta.env.DEV
     ? ""
-    : import.meta.env.VITE_API_BASE_URL || "http://localhost:8000",
+    : import.meta.env.VITE_API_BASE_URL !== undefined
+      ? import.meta.env.VITE_API_BASE_URL
+      : "",
   // 请求超时时间
   timeout: 10000,
   headers: {
@@ -42,7 +43,6 @@ const defaultConfig: AxiosRequestConfig = {
     "Content-Type": "application/json",
     "X-Requested-With": "XMLHttpRequest"
   },
-  // 数组格式参数序列化（https://github.com/axios/axios/issues/5142）
   paramsSerializer: {
     serialize: stringify as unknown as CustomParamsSerializer
   }
