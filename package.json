@@ -1,6 +1,6 @@
 {
   "name": "pvesphere-ui",
-  "version": "6.2.0",
+  "version": "1.0.0-rc01",
   "private": true,
   "type": "module",
   "scripts": {
