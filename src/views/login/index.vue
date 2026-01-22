@@ -59,43 +59,43 @@ dataThemeChange(overallStyle.value);
 const { title, getDropdownItemStyle, getDropdownItemClass } = useNav();
 const { locale, translationCh, translationEn } = useTranslationLang();
 
-// 存储历史登录邮箱的 key
-const LOGIN_EMAILS_KEY = "pvesphere_login_emails";
-const MAX_EMAILS = 10; // 最多保存10个邮箱
+// 存储历史登录账户的 key
+const LOGIN_ACCOUNTS_KEY = "pvesphere_login_accounts";
+const MAX_ACCOUNTS = 10; // 最多保存10个账户
 
-// 从本地存储获取历史登录邮箱
-const getStoredEmails = (): string[] => {
+// 从本地存储获取历史登录账户
+const getStoredAccounts = (): string[] => {
   try {
-    const stored = localStorage.getItem(LOGIN_EMAILS_KEY);
-    return stored ? JSON.parse(stored) : ["pvesphere@gmail.com"];
+    const stored = localStorage.getItem(LOGIN_ACCOUNTS_KEY);
+    return stored ? JSON.parse(stored) : [];
   } catch {
-    return ["pvesphere@gmail.com"];
+    return [];
   }
 };
 
-// 保存邮箱到历史记录
-const saveEmail = (email: string) => {
-  if (!email) return;
+// 保存账户到历史记录
+const saveAccount = (account: string) => {
+  if (!account) return;
   try {
-    const emails = getStoredEmails();
-    // 移除已存在的相同邮箱
-    const filtered = emails.filter(e => e !== email);
+    const accounts = getStoredAccounts();
+    // 移除已存在的相同账户
+    const filtered = accounts.filter(a => a !== account);
     // 添加到最前面
-    filtered.unshift(email);
-    // 只保留前 MAX_EMAILS 个
-    const limited = filtered.slice(0, MAX_EMAILS);
-    localStorage.setItem(LOGIN_EMAILS_KEY, JSON.stringify(limited));
+    filtered.unshift(account);
+    // 只保留前 MAX_ACCOUNTS 个
+    const limited = filtered.slice(0, MAX_ACCOUNTS);
+    localStorage.setItem(LOGIN_ACCOUNTS_KEY, JSON.stringify(limited));
   } catch (error) {
-    console.error("保存邮箱失败:", error);
+    console.error("保存账户失败:", error);
   }
 };
 
 const ruleForm = reactive({
-  email: getStoredEmails()[0] || "pvesphere@gmail.com",
-  password: "Ab123456"
+  account: getStoredAccounts()[0] || "",
+  password: ""
 });
 
-const emailOptions = ref<string[]>(getStoredEmails());
+const accountOptions = ref<string[]>(getStoredAccounts());
 
 const onLogin = async (formEl: FormInstance | undefined) => {
   if (!formEl) return;
@@ -104,14 +104,14 @@ const onLogin = async (formEl: FormInstance | undefined) => {
       loading.value = true;
       useUserStoreHook()
         .loginByUsername({
-          email: ruleForm.email,
+          account: ruleForm.account,
           password: ruleForm.password
         })
         .then(res => {
           if (res.success) {
-            // 保存登录成功的邮箱到历史记录
-            saveEmail(ruleForm.email);
-            emailOptions.value = getStoredEmails();
+            // 保存登录成功的账户到历史记录
+            saveAccount(ruleForm.account);
+            accountOptions.value = getStoredAccounts();
             // 获取后端路由
             return initRouter().then(() => {
               disabled.value = true;
@@ -218,30 +218,21 @@ useEventListener(document, "keydown", ({ code }) => {
             size="large"
           >
             <Motion :delay="100">
-              <el-form-item
-                :rules="[
-                  {
-                    required: true,
-                    message: transformI18n($t('login.pureUsernameReg')),
-                    trigger: 'blur'
-                  }
-                ]"
-                prop="email"
-              >
+              <el-form-item prop="account">
                 <el-select
-                  v-model="ruleForm.email"
+                  v-model="ruleForm.account"
                   filterable
                   allow-create
                   default-first-option
-                  placeholder="请输入或选择邮箱"
+                  placeholder="请输入或选择用户名/邮箱"
                   clearable
                   style="width: 100%"
                 >
                   <el-option
-                    v-for="email in emailOptions"
-                    :key="email"
-                    :label="email"
-                    :value="email"
+                    v-for="account in accountOptions"
+                    :key="account"
+                    :label="account"
+                    :value="account"
                   />
                 </el-select>
               </el-form-item>

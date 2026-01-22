@@ -28,6 +28,17 @@
           :rules="registerRules"
           size="large"
         >
+          <Motion :delay="50">
+            <el-form-item prop="username">
+              <el-input
+                v-model="ruleForm.username"
+                clearable
+                placeholder="请输入用户名（3-20个字符）"
+                :prefix-icon="useRenderIcon(User)"
+              />
+            </el-form-item>
+          </Motion>
+
           <Motion :delay="100">
             <el-form-item prop="email">
               <el-input
@@ -100,7 +111,7 @@ import type { FormInstance } from "element-plus";
 import Motion from "@/views/login/utils/motion";
 import { useRenderIcon } from "@/components/ReIcon/src/hooks";
 import { registerUser } from "@/api/user";
-import { REGEXP_EMAIL, REGEXP_PWD } from "@/views/login/utils/rule";
+import { REGEXP_EMAIL, REGEXP_PWD, REGEXP_USERNAME } from "@/views/login/utils/rule";
 import Lock from "~icons/ri/lock-fill";
 import User from "~icons/ri/user-3-fill";
 
@@ -113,6 +124,7 @@ const loading = ref(false);
 const ruleFormRef = ref<FormInstance>();
 
 const ruleForm = reactive({
+  username: "",
   email: "",
   password: "",
   confirmPassword: ""
@@ -130,6 +142,22 @@ const validateConfirmPassword = (rule: any, value: string, callback: any) => {
 };
 
 const registerRules = reactive({
+  username: [
+    {
+      validator: (rule: any, value: string, callback: any) => {
+        if (value === "") {
+          callback(new Error("请输入用户名"));
+        } else if (value.length < 3 || value.length > 20) {
+          callback(new Error("用户名长度应为3-20个字符"));
+        } else if (!REGEXP_USERNAME.test(value)) {
+          callback(new Error("用户名只能包含字母、数字和下划线"));
+        } else {
+          callback();
+        }
+      },
+      trigger: "blur"
+    }
+  ],
   email: [
     {
       validator: (rule: any, value: string, callback: any) => {
@@ -174,6 +202,7 @@ const onRegister = async (formEl: FormInstance | undefined) => {
     if (valid) {
       loading.value = true;
       registerUser({
+        username: ruleForm.username,
         email: ruleForm.email,
         password: ruleForm.password
       })
@@ -182,13 +211,26 @@ const onRegister = async (formEl: FormInstance | undefined) => {
             message("注册成功，请登录", { type: "success" });
             router.push("/login");
           } else {
+            // 处理特定错误码
+            if (res.code === 1001) {
+              message("该邮箱已被使用", { type: "error" });
+            } else if (res.code === 1002) {
+              message("该用户名已被使用", { type: "error" });
+          } else {
             message(res.message || "注册失败", { type: "error" });
+            }
           }
         })
         .catch(error => {
-          message(error?.response?.data?.message || "注册失败", {
-            type: "error"
-          });
+          const errorCode = error?.response?.data?.code;
+          const errorMessage = error?.response?.data?.message;
+          if (errorCode === 1001) {
+            message("该邮箱已被使用", { type: "error" });
+          } else if (errorCode === 1002) {
+            message("该用户名已被使用", { type: "error" });
+          } else {
+            message(errorMessage || "注册失败", { type: "error" });
+          }
         })
         .finally(() => {
           loading.value = false;

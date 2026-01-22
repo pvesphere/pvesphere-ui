@@ -51,7 +51,7 @@ export type RefreshTokenResult = {
 };
 
 /** 登录 */
-export const getLogin = (data?: { email: string; password: string }) => {
+export const getLogin = (data?: { account: string; password: string }) => {
   return http.request<UserResult>("post", "/api/v1/login", { data });
 };
 
@@ -66,7 +66,7 @@ export const getUserInfo = () => {
 };
 
 /** 注册用户 */
-export const registerUser = (data?: { email: string; password: string }) => {
+export const registerUser = (data?: { username: string; email: string; password: string }) => {
   return http.request<{ code: number; message: string; data?: any }>(
     "post",
     "/api/v1/register",

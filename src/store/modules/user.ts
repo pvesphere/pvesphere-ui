@@ -81,7 +81,7 @@ export const useUserStore = defineStore("pure-user", {
       this.loginDay = Number(value);
     },
     /** 登入 */
-    async loginByUsername(data: { email: string; password: string }) {
+    async loginByUsername(data: { account: string; password: string }) {
       return new Promise<UserResult>((resolve, reject) => {
         getLogin(data)
           .then(async loginRes => {
@@ -123,8 +123,8 @@ export const useUserStore = defineStore("pure-user", {
                   ? new Date(rawResponse.expires)
                   : new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), // 默认7天过期
                 avatar: '',
-                username: data.email,
-                nickname: data.email,
+                username: data.account,
+                nickname: data.account,
                 roles: ['common'],
                 permissions: []
               };
@@ -145,8 +145,8 @@ export const useUserStore = defineStore("pure-user", {
                     refreshToken: rawResponse?.refreshToken || '',
                     expires: tempTokenData.expires,
                     avatar: userInfo?.avatar || '',
-                    username: userInfo?.email || userInfo?.username || data.email,
-                    nickname: userInfo?.nickname || userInfo?.name || data.email,
+                    username: userInfo?.username || userInfo?.email || data.account,
+                    nickname: userInfo?.nickname || userInfo?.name || data.account,
                     roles: userInfo?.roles || ['common'],
                     permissions: userInfo?.permissions || []
                   }

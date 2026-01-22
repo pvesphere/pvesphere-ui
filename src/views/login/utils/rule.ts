@@ -26,17 +26,31 @@ export const REGEXP_PWD =
 export const REGEXP_EMAIL =
   /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
+/** 用户名正则（3-20个字符，支持字母、数字、下划线） */
+export const REGEXP_USERNAME = /^[a-zA-Z0-9_]{3,20}$/;
+
 /** 登录校验 */
 const loginRules = reactive<FormRules>({
-  email: [
+  account: [
     {
       validator: (rule, value, callback) => {
         if (value === "") {
-          callback(new Error("请输入邮箱"));
-        } else if (!REGEXP_EMAIL.test(value)) {
+          callback(new Error("请输入用户名或邮箱"));
+        } else {
+          // 如果包含@符号，验证邮箱格式；否则验证用户名格式
+          if (value.includes("@")) {
+            if (!REGEXP_EMAIL.test(value)) {
           callback(new Error("请输入正确的邮箱格式"));
+            } else {
+              callback();
+            }
+          } else {
+            if (!REGEXP_USERNAME.test(value)) {
+              callback(new Error("用户名应为3-20个字符，支持字母、数字、下划线"));
         } else {
           callback();
+            }
+          }
         }
       },
       trigger: "blur"
