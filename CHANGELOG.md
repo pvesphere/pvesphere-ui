@@ -5,6 +5,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0] - 2026-01-25
+
+### 🎉 正式发布版本
+
+PveSphere UI v1.0.0 是第一个正式发布版本，提供了现代化的 Web 管理界面。
+
+#### ✨ 新增功能
+
+- **国际化登录界面**：登录框支持中英文自适应
+- **GitHub 和文档链接**：在导航栏添加 GitHub 仓库和官方文档链接
+- **移除权限配置菜单**：简化界面，移除示例权限菜单
+
+#### 🔧 改进
+
+- **API 代理配置**：优化开发环境的 API 代理设置
+- **环境变量配置**：支持通过环境变量配置后端 API 地址
+- **代码质量**：移除 Husky 和 commitlint，简化开发流程
+
+#### 🐛 修复
+
+- 修复前端无法调用后端 API 的问题
+- 修复登录框 account 字段的国际化支持
+- 修复 @novnc/novnc 版本兼容性问题
+
+---
+
 ## [1.0.0-rc01] - 2026-01-10
 
 ### 🧪 Release Candidate 1
@@ -33,4 +59,5 @@ PveSphere UI v1.0.0-rc01 是第一个候选发布版本，提供了现代化的 
 
 ---
 
+[1.0.0]: https://github.com/pvesphere/pvesphere-ui/releases/tag/v1.0.0
 [1.0.0-rc01]: https://github.com/pvesphere/pvesphere-ui/releases/tag/v1.0.0-rc01
