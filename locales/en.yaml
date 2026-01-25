@@ -95,6 +95,7 @@ status:
 login:
   pureUsername: Username
   purePassword: Password
+  pureAccountPlaceholder: Please enter or select username/email
   pureLogin: Login
   pureLoginSuccess: Login Success
   pureLoginFail: Login Fail
@@ -102,6 +103,9 @@ login:
   pureUsernameReg: Please enter username
   purePassWordReg: Please enter password
   purePassWordRuleReg: The password format should be any combination of 8-18 digits, letters, and symbols
+  pureAccountEmpty: Please enter username or email
+  pureAccountEmailFormat: Please enter a valid email format
+  pureAccountUsernameFormat: Username should be 3-20 characters, supporting letters, numbers, and underscores
   pureRegister: Register
 user:
   settings:

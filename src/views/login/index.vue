@@ -224,7 +224,7 @@ useEventListener(document, "keydown", ({ code }) => {
                   filterable
                   allow-create
                   default-first-option
-                  placeholder="请输入或选择用户名/邮箱"
+                  :placeholder="t('login.pureAccountPlaceholder')"
                   clearable
                   style="width: 100%"
                 >

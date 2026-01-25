@@ -95,6 +95,7 @@ status:
 login:
   pureUsername: 账号
   purePassword: 密码
+  pureAccountPlaceholder: 请输入或选择用户名/邮箱
   pureLogin: 登录
   pureLoginSuccess: 登录成功
   pureLoginFail: 登录失败
@@ -102,6 +103,9 @@ login:
   pureUsernameReg: 请输入账号
   purePassWordReg: 请输入密码
   purePassWordRuleReg: 密码格式应为8-18位数字、字母、符号的任意两种组合
+  pureAccountEmpty: 请输入用户名或邮箱
+  pureAccountEmailFormat: 请输入正确的邮箱格式
+  pureAccountUsernameFormat: 用户名应为3-20个字符，支持字母、数字、下划线
   pureRegister: 注册账号
 user:
   settings:

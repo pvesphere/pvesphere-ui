@@ -23,8 +23,7 @@ export const REGEXP_PWD =
   /^(?![0-9]+$)(?![a-z]+$)(?![A-Z]+$)(?!([^(0-9a-zA-Z)]|[()])+$)(?!^.*[\u4E00-\u9FA5].*$)([^(0-9a-zA-Z)]|[()]|[a-z]|[A-Z]|[0-9]){8,18}$/;
 
 /** 邮箱正则 */
-export const REGEXP_EMAIL =
-  /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+export const REGEXP_EMAIL = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 /** 用户名正则（3-20个字符，支持字母、数字、下划线） */
 export const REGEXP_USERNAME = /^[a-zA-Z0-9_]{3,20}$/;
@@ -35,20 +34,24 @@ const loginRules = reactive<FormRules>({
     {
       validator: (rule, value, callback) => {
         if (value === "") {
-          callback(new Error("请输入用户名或邮箱"));
+          callback(new Error(transformI18n($t("login.pureAccountEmpty"))));
         } else {
           // 如果包含@符号，验证邮箱格式；否则验证用户名格式
           if (value.includes("@")) {
             if (!REGEXP_EMAIL.test(value)) {
-          callback(new Error("请输入正确的邮箱格式"));
+              callback(
+                new Error(transformI18n($t("login.pureAccountEmailFormat")))
+              );
             } else {
               callback();
             }
           } else {
             if (!REGEXP_USERNAME.test(value)) {
-              callback(new Error("用户名应为3-20个字符，支持字母、数字、下划线"));
-        } else {
-          callback();
+              callback(
+                new Error(transformI18n($t("login.pureAccountUsernameFormat")))
+              );
+            } else {
+              callback();
             }
           }
         }
