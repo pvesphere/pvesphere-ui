@@ -308,6 +308,23 @@ pve:
     cpuSockets: CPU插槽数
     console: 控制台
     maintenance: 主机维护
+    maintenanceTitle: 主机维护
+    startMaintenance: 开始维护
+    endMaintenance: 结束维护
+    selectedNode: 当前节点
+    candidates: 可迁移目标节点
+    progress: 维护进度
+    step1: 准备阶段
+    step2: 迁移中
+    step3: 完成
+    dialogTitle: 开始主机维护
+    mode: 迁移模式
+    modeAuto: 自动选择
+    modeManual: 手动选择
+    concurrency: 并发数
+    selectTargetNodes: 选择目标节点
+    confirmMaintenance: 确定要开始主机维护吗？此操作将迁移该节点上的所有虚拟机。
+    confirmEndMaintenance: 确定要结束维护吗？节点将恢复可调度状态。
     reboot: 重启
     shutdown: 关闭
     confirmReboot: 确认重启

@@ -308,6 +308,23 @@ pve:
     cpuSockets: CPU Sockets
     console: Console
     maintenance: Maintenance
+    maintenanceTitle: Node Maintenance
+    startMaintenance: Start Maintenance
+    endMaintenance: End Maintenance
+    selectedNode: Current Node
+    candidates: Migratable Targets
+    progress: Maintenance Progress
+    step1: Preparation
+    step2: Migrating
+    step3: Completed
+    dialogTitle: Start Node Maintenance
+    mode: Migration Mode
+    modeAuto: Auto Select
+    modeManual: Manual Select
+    concurrency: Concurrency
+    selectTargetNodes: Select Target Nodes
+    confirmMaintenance: Are you sure you want to start maintenance? This will migrate all VMs on this node.
+    confirmEndMaintenance: Are you sure you want to end maintenance? Node will restore schedulable state.
     reboot: Reboot
     shutdown: Shutdown
     confirmReboot: Confirm Reboot

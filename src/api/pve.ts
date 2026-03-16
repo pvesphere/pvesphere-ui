@@ -1985,3 +1985,104 @@ export const createNodeConsole = (data: NodeConsolePayload) => {
 };
 
 
+
+// ========== 主机维护 API ==========
+
+// 可迁移目标节点
+export interface MigrateCandidate {
+  node_id: number;
+  node_name: string;
+  cpu_cores: number;
+  cpu_usage: number;
+  mem_total: number;
+  mem_used: number;
+  mem_free: number;
+  mem_usage: number;
+  vm_count: number;
+  score: number;
+}
+
+export interface MigrateCandidatesResponse {
+  code: number;
+  message: string;
+  data: MigrateCandidate[];
+}
+
+// 获取可迁移目标节点
+export const fetchMigrateCandidates = (node_id: number | string) => {
+  return http.request<MigrateCandidatesResponse>("get", "/api/v1/nodes/maintenance/candidates", {
+    params: { node_id }
+  });
+};
+
+// 节点上的VM
+export interface NodeVMItem {
+  vm_id: number;
+  vm_name: string;
+  status: string;
+  cpu: number;
+  mem: number;
+  node_id: number;
+  node_name: string;
+}
+
+export interface NodeVMsResponse {
+  code: number;
+  message: string;
+  data: NodeVMItem[];
+}
+
+// 获取节点VM列表
+export const fetchNodeVMs = (node_id: number | string) => {
+  return http.request<NodeVMsResponse>("get", "/api/v1/nodes/maintenance/vms", {
+    params: { node_id }
+  });
+};
+
+// 开始维护请求
+export interface StartMaintenanceRequest {
+  node_id: string;
+  mode: "manual" | "auto";
+  target_nodes?: number[];
+  concurrency?: number;
+}
+
+// 迁移任务
+export interface MaintenanceTask {
+  vm_id: string;
+  vm_name: string;
+  target_node: string;
+  status: "pending" | "migrating" | "completed" | "failed";
+  error?: string;
+}
+
+// 维护结果
+export interface NodeMaintenanceResult {
+  node_id: string;
+  status: "maintenance" | "migrating" | "completed" | "failed";
+  total_vms: number;
+  migrated_vms: number;
+  failed_vms: number;
+  tasks: MaintenanceTask[];
+}
+
+export interface NodeMaintenanceResponse {
+  code: number;
+  message: string;
+  data: NodeMaintenanceResult;
+}
+
+// 开始维护
+export const startMaintenance = (data: StartMaintenanceRequest) => {
+  return http.request<NodeMaintenanceResponse>("post", "/api/v1/nodes/maintenance/start", { data });
+};
+
+// 结束维护请求
+export interface EndMaintenanceRequest {
+  node_id: string;
+}
+
+// 结束维护
+export const endMaintenance = (data: EndMaintenanceRequest) => {
+  return http.request<NodeMaintenanceResponse>("post", "/api/v1/nodes/maintenance/end", { data });
+};
