@@ -59,6 +59,7 @@ import {
   type ZfsStorage
 } from "@/api/pve";
 import NodeConsoleDialog from "./components/NodeConsoleDialog.vue";
+import NodeMaintenance from "./components/NodeMaintenance.vue";
 
 const loading = ref(false);
 const allNodes = ref<Node[]>([]);
@@ -944,6 +945,10 @@ const consoleNodeId = ref<number | null>(null);
 const consoleNodeName = ref<string>("");
 const consoleClusterId = ref<number | null>(null);
 
+// 主机维护
+const maintenanceDialogVisible = ref(false);
+const maintenanceSelectedNode = ref<{ id: number; node_name: string } | undefined>(undefined);
+
 const handleNodeConsole = (row: Node, event: Event) => {
   event.stopPropagation();
   consoleNodeId.value = row.id;
@@ -952,10 +957,11 @@ const handleNodeConsole = (row: Node, event: Event) => {
   consoleDialogVisible.value = true;
 };
 
-// 主机维护（占位）
+// 主机维护
 const handleNodeMaintenance = (row: Node, event: Event) => {
   event.stopPropagation();
-  ElMessage.info(t('pve.node.maintenanceNotImplemented'));
+  maintenanceSelectedNode.value = { id: row.id, node_name: row.node_name };
+  maintenanceDialogVisible.value = true;
 };
 
 // 处理下拉菜单命令
@@ -2427,6 +2433,19 @@ onUnmounted(() => {
       :node-name="consoleNodeName"
       :cluster-id="consoleClusterId || 0"
     />
+
+    <!-- 主机维护对话框 -->
+    <el-dialog
+      v-model="maintenanceDialogVisible"
+      :title="t('pve.node.maintenanceTitle')"
+      width="90%"
+      :close-on-click-modal="false"
+    >
+      <NodeMaintenance
+        :selected-node="maintenanceSelectedNode"
+        @refresh="loadData"
+      />
+    </el-dialog>
   </div>
 </template>
 
