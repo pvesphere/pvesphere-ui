@@ -309,11 +309,37 @@ pve:
     console: Console
     maintenance: Maintenance
     maintenanceTitle: Node Maintenance
+    maintenanceGuide: Select a node to maintain, view VM list and migration targets
     startMaintenance: Start Maintenance
     endMaintenance: End Maintenance
     selectedNode: Current Node
     candidates: Migratable Targets
+    maintenanceStatus: Maintenance Status
+    candidatesTip: The following target nodes are intelligently recommended based on resource usage. Higher scores indicate more suitable for migration.
     progress: Maintenance Progress
+    vmList: VM List
+    showRunningOnly: Show Running Only
+    selectedVMs: "{count} VMs Selected"
+    vmId: VM ID
+    migratePriority: Migration Priority
+    priorityHigh: High
+    priorityNormal: Medium
+    priorityLow: Low
+    historyRecords: History
+    migrateStatus: Status
+    migrateProgress: Migration Progress
+    migrateDetail: Migration Detail
+    migrateSteps: Migration Steps
+    vmName: VM Name
+    targetNode: Target Node
+    errorInfo: Error Info
+    planId: Plan ID
+    totalVMs: Total VMs
+    migrated: Migrated
+    failed: Failed
+    startTime: Start Time
+    endTime: End Time
+    duration: Duration
     step1: Preparation
     step2: Migrating
     step3: Completed

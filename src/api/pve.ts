@@ -2086,3 +2086,177 @@ export interface EndMaintenanceRequest {
 export const endMaintenance = (data: EndMaintenanceRequest) => {
   return http.request<NodeMaintenanceResponse>("post", "/api/v1/nodes/maintenance/end", { data });
 };
+
+// ============================================================
+// 异步维护计划 API
+// ============================================================
+
+// 创建维护计划请求
+export interface CreateMaintenancePlanRequest {
+  node_id: string;
+  mode: "auto" | "manual";
+  target_nodes?: number[];
+  concurrency?: number;
+}
+
+// 维护计划详情
+export interface MaintenancePlanDetail {
+  plan_id: number;
+  node_id: number;
+  node_name: string;
+  status: "pending" | "running" | "completed" | "failed" | "cancelled";
+  mode: string;
+  concurrency: number;
+  total_vms: number;
+  migrated_vms: number;
+  failed_vms: number;
+  start_time?: string;
+  end_time?: string;
+  create_time?: string;
+}
+
+// 创建维护计划响应
+export interface CreateMaintenancePlanResponse {
+  code: number;
+  message: string;
+  data: MaintenancePlanDetail;
+}
+
+// 创建维护计划
+export const createMaintenancePlan = (data: CreateMaintenancePlanRequest) => {
+  return http.request<CreateMaintenancePlanResponse>("post", "/api/v1/nodes/maintenance/plans", { data });
+};
+
+// 维护任务详情
+export interface MaintenanceTaskDetail {
+  task_id: number;
+  plan_id: number;
+  vm_id: number;
+  vm_name: string;
+  source_node: string;
+  target_node: string;
+  status: "pending" | "running" | "completed" | "failed";
+  error_message?: string;
+  started_at?: string;
+  completed_at?: string;
+}
+
+// 维护任务列表项
+export interface MaintenanceTaskItem {
+  task_id: number;
+  vm_id: number;
+  vm_name: string;
+  source_node: string;
+  target_node: string;
+  status: "pending" | "running" | "completed" | "failed";
+  error_message?: string;
+  started_at?: string;
+  completed_at?: string;
+}
+
+// 维护计划进度
+export interface MaintenancePlanProgress {
+  plan_id: number;
+  node_name: string;
+  status: "pending" | "running" | "completed" | "failed" | "cancelled";
+  total_vms: number;
+  migrated_vms: number;
+  failed_vms: number;
+  progress: number;
+  tasks: MaintenanceTaskItem[];
+}
+
+// 维护计划进度响应
+export interface MaintenancePlanProgressResponse {
+  code: number;
+  message: string;
+  data: MaintenancePlanProgress;
+}
+
+// 获取维护计划进度
+export const getMaintenancePlanProgress = (plan_id: number) => {
+  return http.request<MaintenancePlanProgressResponse>("get", `/api/v1/nodes/maintenance/plans/${plan_id}/progress`);
+};
+
+// 维护任务列表响应
+export interface MaintenanceTaskListResponse {
+  code: number;
+  message: string;
+  data: {
+    total: number;
+    tasks: MaintenanceTaskItem[];
+  };
+}
+
+// 获取维护计划任务列表
+export const getMaintenancePlanTasks = (plan_id: number, page: number = 1, page_size: number = 20) => {
+  return http.request<MaintenanceTaskListResponse>("get", `/api/v1/nodes/maintenance/plans/${plan_id}/tasks`, {
+    params: { page, page_size }
+  });
+};
+
+// 维护计划详情响应
+export interface MaintenancePlanDetailResponse {
+  code: number;
+  message: string;
+  data: MaintenancePlanDetail;
+}
+
+// 获取维护计划详情
+export const getMaintenancePlan = (plan_id: number) => {
+  return http.request<MaintenancePlanDetailResponse>("get", `/api/v1/nodes/maintenance/plans/${plan_id}`);
+};
+
+// 取消维护计划请求
+export interface CancelMaintenancePlanRequest {
+  plan_id: number;
+}
+
+// 取消维护计划
+export const cancelMaintenancePlan = (plan_id: number) => {
+  return http.request<{ code: number; message: string }>("post", `/api/v1/nodes/maintenance/plans/${plan_id}/cancel`);
+};
+
+// 历史记录
+export interface HistoryRecord {
+  plan_id: number;
+  node_id: number;
+  node_name: string;
+  status: "completed" | "failed" | "cancelled";
+  total_vms: number;
+  migrated_vms: number;
+  failed_vms: number;
+  start_time?: string;
+  end_time?: string;
+  duration?: string;
+}
+
+// 维护历史响应
+export interface MaintenanceHistoryResponse {
+  code: number;
+  message: string;
+  data: {
+    total: number;
+    records: HistoryRecord[];
+  };
+}
+
+// 获取维护历史
+export const getMaintenanceHistory = (page: number = 1, page_size: number = 20, node_id?: number) => {
+  return http.request<MaintenanceHistoryResponse>("get", "/api/v1/nodes/maintenance/history", {
+    params: { page, page_size, node_id }
+  });
+};
+
+// 维护计划列表项
+export interface MaintenancePlanItem {
+  plan_id: number;
+  node_id: number;
+  node_name: string;
+  status: "pending" | "running" | "completed" | "failed" | "cancelled";
+  total_vms: number;
+  migrated_vms: number;
+  failed_vms: number;
+  start_time?: string;
+  create_time?: string;
+}

@@ -309,11 +309,37 @@ pve:
     console: 控制台
     maintenance: 主机维护
     maintenanceTitle: 主机维护
+    maintenanceGuide: 选择要维护的节点，查看 VM 列表和迁移目标
     startMaintenance: 开始维护
     endMaintenance: 结束维护
     selectedNode: 当前节点
     candidates: 可迁移目标节点
+    maintenanceStatus: 维护状态
+    candidatesTip: 以下是根据资源使用情况智能推荐的目标节点，评分越高表示越适合迁移
     progress: 维护进度
+    vmList: VM 列表
+    showRunningOnly: 仅显示运行中
+    selectedVMs: 已选择 {count} 台 VM
+    vmId: VM ID
+    migratePriority: 迁移优先级
+    priorityHigh: 高
+    priorityNormal: 中
+    priorityLow: 低
+    historyRecords: 历史记录
+    migrateStatus: 迁移状态
+    migrateProgress: 迁移进度
+    migrateDetail: 迁移详情
+    migrateSteps: 迁移步骤
+    vmName: VM名称
+    targetNode: 目标节点
+    errorInfo: 错误信息
+    planId: 计划ID
+    totalVMs: 总VM数
+    migrated: 已迁移
+    failed: 失败
+    startTime: 开始时间
+    endTime: 结束时间
+    duration: 持续时间
     step1: 准备阶段
     step2: 迁移中
     step3: 完成
